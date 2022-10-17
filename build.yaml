@@ -6,8 +6,8 @@ version: 0.2
 env:
   variables:
     # Customers should configure this variable using paramater-store or secrets-manager
-    SECURE_API_TOKEN: <your API token>
-    SYSDIG_API_ENDPOINT: <Sysdig API endpoint for your region>
+    SECURE_API_TOKEN: 04a61f29-8d26-4dba-90ab-976e9081d31e
+    SYSDIG_API_ENDPOINT: https://eu1.app.sysdig.com/
 
 phases:
   install:
@@ -27,8 +27,9 @@ phases:
 
   build:
     commands:
-      - docker build -t nginx-hello:hello1 .
+      #- docker build -t nginx-hello:hello1 .
+      - docker build -t my-apache2 .
   post_build:
     commands:
       - pwd
-      - ./sysdig-cli-scanner --apiurl $SYSDIG_API_ENDPOINT nginx-hello:hello1
+      - ./sysdig-cli-scanner --apiurl $SYSDIG_API_ENDPOINT my-apache2
