@@ -31,5 +31,5 @@ phases:
       - docker build -t my-apache2 .
   post_build:
     commands:
-      - pwd
-      - ./sysdig-cli-scanner --apiurl $SYSDIG_API_ENDPOINT my-apache2
+      #- pwd
+      #- ./sysdig-cli-scanner --apiurl $SYSDIG_API_ENDPOINT my-apache2
