@@ -8,6 +8,10 @@ env:
     # Customers should configure this variable using paramater-store or secrets-manager
     SECURE_API_TOKEN: 04a61f29-8d26-4dba-90ab-976e9081d31e
     SYSDIG_API_ENDPOINT: https://eu1.app.sysdig.com/
+    
+files:
+  - source: /
+    destination: /
 
 phases:
   install:
