@@ -28,6 +28,8 @@ phases:
       #  FROM public.ecr.aws/nginx/nginx
       #  COPY index.html /usr/share/nginx/html
       #  EOF
+      FROM httpd:2.4
+      COPY ./public-html/ /usr/local/apache2/htdocs/
 
   build:
     commands:
