@@ -39,10 +39,3 @@ phases:
     commands:
       #- pwd
       #- ./sysdig-cli-scanner --apiurl $SYSDIG_API_ENDPOINT my-apache2
-
-  artifacts:
-    files:
-      - '**/*'
-    base-directory: /
-    name: dev-backend-build-artifact
-    discard-paths: no
